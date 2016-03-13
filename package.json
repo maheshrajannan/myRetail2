@@ -1,0 +1,19 @@
+{
+  "name"         : "node-todo",
+  "version"      : "0.0.0",
+  "description"  : "Simple todo application.",
+  "main"         : "server.js",
+  "author"       : "Mahesh Rajannan",
+  "dependencies" : {
+    "express"         : "~4.6.1",
+    "mongoose"        : "*",
+    "mongoose-auto-increment"	: "*",
+    "morgan"          : "~1.1.1",
+    "body-parser"     : "~1.4.3",
+    "method-override" : "~2.1.1",
+    "node-rest-client": "*",
+    "util" :"*",
+    "fs" : "*",
+    "https" :"*"
+  }
+}
