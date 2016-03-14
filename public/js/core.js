@@ -1,0 +1,2 @@
+//for module maheshTodo, priceInfoController, priceInfoService and angular-responsive are all dependencies.
+angular.module('maheshPriceInfo', ['priceInfoController', 'priceInfoService','angular-responsive']);
