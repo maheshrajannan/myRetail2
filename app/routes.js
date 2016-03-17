@@ -6,9 +6,9 @@ function getProduct(res,inProductId,inKey){
 	console.log('getProduct inProductId:' + inProductId);
 	console.log('getProduct inKey:' + inKey);
 
-	//TODO: format nicely.
-	//TODO: unit testing.
-	//TODO: callback mayhem for each price info, call forEachCallback, 
+	//IMPROVEMENT: format nicely.
+	//IMPROVEMENT: unit testing (pm2 ?).
+	//DONE: callback for each price info, call forEachCallback, 
 	//DONE: add the authentication param
 	var product;
 	ProductApiClient.getProduct(inProductId,inKey,function(foundProduct) {

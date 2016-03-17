@@ -64,8 +64,7 @@ var getProduct = function (inProductId,inKey,callback) {
 					product = { productId : inProductId ,productName : 'NA',error: 'Error'};
 					return callback(product);
 				}	
-				//TODO: handle error call back.
-				//TODO: return correct response code.
+				//IMPROVEMENT: handle error call back.
 			});
 	} else {
 		return callback(product);
