@@ -24,8 +24,7 @@ var https = require('https');
 mongoose.connect(database.url); 	// connect to mongoDB database on modulus.io
 
 //This is the UI module.
-//TODO: remove this.
-app.use(express.static(__dirname + '/public')); 		// set the static files location /public/img will be /img for users
+//IMPROVEMENT: Add a static page, when the request is not matching after the base.Provide some directions there.
 app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'})); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
@@ -44,8 +43,11 @@ require('./app/routes.js')(app);
  */
 
 var server = https.createServer(options,app);
-//TODO: on error ? on listening ?
+//IMPROVEMENT: on error ? on listening ?
 
 server.listen(port, function(){
   console.log('https web server listening on port '+port);
 });
+
+//IMPROVEMENT: specify start in package JSON.
+//IMPROVEMENT: start node in clustered manner.

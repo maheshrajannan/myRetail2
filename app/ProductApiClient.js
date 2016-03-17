@@ -8,14 +8,13 @@ var getProduct = function (inProductId,inKey,callback) {
 	console.log('inProductId:' + inProductId);
 	console.log('inKey:' + inKey);
 	if(!util.isNullOrUndefined(inProductId) && !util.isNullOrUndefined(inKey)) {
-		//TODO: there is some threading problem with this API, so initializing this every time and using closure .
+		//INFO: use closures correctly, putting these at a higher scope would cause interference across requests..
 		var productApiUrl = 'https://api.target.com/products/v3/${productId}';
 		var Client = require('node-rest-client').Client;
 		var productApiClient = new Client();
 
 		var args = {
 			path: { "productId": inProductId }, // path substitution var 
-			//TODO: if you have time parameterize this.
 			parameters: { fields : "descriptions", id_type : "TCIN" , key : inKey } // query parameter substitution vars 
 		};
 

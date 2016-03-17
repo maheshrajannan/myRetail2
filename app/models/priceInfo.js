@@ -8,6 +8,8 @@ var connection = mongoose.createConnection(database.url);
 autoIncrement.initialize(connection);
 
 // create a schema
+//INFO: using defaults only for making it easy to create data. 
+//Do not create defaults for product id and product id type in production.
 var priceInfoSchema = new Schema({
 	value : {type : Number, default: ''},
 	currencyCode : {type : String, default: 'USD'},

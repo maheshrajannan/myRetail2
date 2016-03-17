@@ -1,7 +1,7 @@
 {
-  "name"         : "node-todo",
+  "name"         : "MyRetail",
   "version"      : "0.0.0",
-  "description"  : "Simple todo application.",
+  "description"  : "My Retail IN MEAN",
   "main"         : "server.js",
   "author"       : "Mahesh Rajannan",
   "dependencies" : {
@@ -17,3 +17,4 @@
     "https" :"*"
   }
 }
+//Included exact versions for the sake of user's ease of use.
